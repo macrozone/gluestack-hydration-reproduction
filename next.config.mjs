@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import { withGluestackUI } from "@gluestack/ui-next-adapter";
 
-export default nextConfig;
+const nextConfig = {
+  reactStrictMode: true,
+  transpilePackages: ["@gluestack-ui/themed"],
+};
+
+export default withGluestackUI(nextConfig);
